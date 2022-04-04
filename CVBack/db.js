@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const urlMongo = "mongodb://127.0.0.1:27017";
+const urlMongo = "mongodb://localhost:27017/cvweb";
 
 
 
