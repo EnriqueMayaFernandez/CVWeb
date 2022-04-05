@@ -2,11 +2,18 @@ const express = require("express");
 const app = express();
 
 require("dotenv").config();
-require('./db');
+require("./db");
 
-const apiRouter = require('./routes/api');
+const apiRouter = require("./routes/api");
 
-app.use('/api', apiRouter);
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+);
+
+app.use("/api", apiRouter);
 
 const PORT = process.env.PORT || 3333;
 
