@@ -1,0 +1,32 @@
+.container {
+  height: 100%;
+  overflow: scroll;
+}
+
+.container__section {
+  height: 100%;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.hero {
+  background-color: papayawhip;
+  & > div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/images/iceland-gd83b920c3_1920.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.about {
+  background-color: lightgray;
+}
+.proyectos {
+  background-color: darkgrey;
+}

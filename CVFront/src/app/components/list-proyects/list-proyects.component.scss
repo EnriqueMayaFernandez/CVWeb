@@ -1,0 +1,30 @@
+.list-project {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+
+.project {
+  flex-basis: 98%;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 100px;
+  background-color: tomato;
+  margin: 1%;
+}
+
+@media (min-width: 768px) {
+  .list-project {
+    .project {
+      flex-basis: 48%;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+    .list-project {
+      .project {
+        flex-basis: 31%;
+      }
+    }
+  }
