@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const urlMongo = "mongodb://localhost:27017/cvweb";
+const urlMongo = process.env.MONGO_URL;
 
 
 
