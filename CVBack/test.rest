@@ -1,20 +1,28 @@
 GET http://localhost:3000/api/proyectos
-acces-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MTY5NDkwLCJleHBpcmVkQXQiOjE2NDkxNjk3OTB9.53y18F7qaJ7S1eUROVlFJrH3tLIrrk8XElNCL3DPRps
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
+
+###
+
+GET http://localhost:3000/api/proyectos/nodejs
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
 
 ###
 POST http://localhost:3000/api/proyectos
-content-type: application/json
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
+Content-type: application/json
 
 {
-    "titulo":"Proyecto de Prueba",
-    "descripcion":"Esta es la descripcion",
+    "titulo":"CV Web",
+    "descripcion":"Creacion Live Coding Enrique",
     "url":"http://www.google.es",
     "cliente":"Google",
-    "url_cliente":"http:///www.google.com/quien-somos"
+    "url_cliente":"http:///www.google.com/quien-somos",
+    "categoria":"wordpress"
 }
 
 ###
 PUT http://localhost:3000/api/proyectos/624c0e0535dbc5b705374ca1
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
 content-type: application/json
 
 {
@@ -22,7 +30,8 @@ content-type: application/json
     "descripcion":"Esta es la descripcion editada",
     "url":"http://www.google.es",
     "cliente":"Google",
-    "url_cliente":"http:///www.google.com/quien-somos"
+    "url_cliente":"http:///www.google.com/quien-somos",
+    "categoria":"nodejs"
 }
 
 ###
@@ -30,3 +39,11 @@ DELETE http://localhost:3000/api/proyectos/624c1408e2693b75c9821f19
 
 ###
 GET http://localhost:3000/api/token
+
+### PRODUCCIÓN
+GET https://cvback-enrique.herokuapp.com/api/proyectos
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
+
+###
+
+GET https://cvback-enrique.herokuapp.com/api/token
