@@ -1,0 +1,15 @@
+<h2 class="mt-5">Lista de proyectos</h2>
+<div class="proyectos row">
+    {{#each proyectos as | proyecto |}}
+  <div class="col-3">
+    <div class="proyecto">
+      <h4>{{proyecto.titulo}}</h4>
+      <p>{{proyecto.descripcion}}</p>
+      <p><a href="{{proyecto.url}}">{{proyecto.url}}</a></p>
+      <p>{{proyecto.cliente}}</p>
+      <p>{{proyecto.categoria}}</p>
+      <a href="/proyectos/{{proyecto._id}}" class="btn btn-block btn-info">Ver detalle</a>
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -1,16 +1,19 @@
-const express = require("express");
-const exphbs = require("express-handlebars");
+const express = require('express');
 const cors = require('cors');
+const exphbs = require('express-handlebars');
 const app = express();
 
 require("dotenv").config();
 require("./db");
 
 const apiRouter = require("./routes/api");
+const proyectosRouter = require("./routes/proyectos")
 
 //Template Engine Setup
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+
+app.engine('.hbs', exphbs.engine({extname: '.hbs'}));
+app.set('view engine','.hbs');
+app.use(express.static('public'));
 
 app.use(cors());
 app.use(express.json());
@@ -20,11 +23,8 @@ app.use(
   })
 );
 
-app.get('/test',(req,res) => {
-  res.render('prueba')
-});
-
 app.use("/api", apiRouter);
+app.use ('/proyectos', proyectosRouter);
 
 const PORT = process.env.PORT || 3333;
 
