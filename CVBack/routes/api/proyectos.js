@@ -7,6 +7,11 @@ router.get("/", async (req, res) => {
   console.log(req.payload);
   try {
     const proyectos = await Proyecto.find();
+    // proyectos.map(proyecto=>{
+    //   return {
+    //     proyecto, imagen: proyecto.imagen.split('/').splice(0,1).join('/')
+    //   }
+    // })
     res.json(proyectos);
   } catch (err) {
     res.status(503).json({ error: err });
