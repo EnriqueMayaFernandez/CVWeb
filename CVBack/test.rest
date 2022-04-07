@@ -7,7 +7,7 @@ GET http://localhost:3000/api/proyectos/624c01a8cc9b3f351c7a565d
 access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
 ###
 
-GET http://localhost:3000/api/proyectos/categoria/nodejs
+GET http://localhost:3000/api/proyectos/category/nodejs
 access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
 
 ###
@@ -16,12 +16,12 @@ access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY
 Content-type: application/json
 
 {
-    "titulo":"CV Web",
-    "descripcion":"Creacion Live Coding Enrique",
+    "titulo":"CV Back",
+    "description":"Hola",
     "url":"http://www.google.es",
-    "cliente":"Google",
-    "url_cliente":"http:///www.google.com/quien-somos",
-    "categoria":"wordpress"
+    "client":"Google",
+    "urlClient":"http:///www.google.com/quien-somos",
+    "category":"angular"
 }
 
 ###

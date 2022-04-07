@@ -7,7 +7,7 @@
 <div class="list-project">
     <div class="project" *ngFor="let project of arrProjects">
         <h2>{{project.titulo}}</h2>
-        <a [routerLink]="['/projects',project.getId]">Ver detalle</a>
+        <a [routerLink]="['/projects/',project._id]">Ver detalle</a>
     </div>
     
 </div>

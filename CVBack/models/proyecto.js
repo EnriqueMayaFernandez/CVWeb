@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 let proyectoSchema = new Schema({
   titulo: String,
-  descripcion: String,
+  description: String,
   url: String,
-  cliente: String,
-  url_cliente: String,
-  categoria: {
+  client: String,
+  urlClient: String,
+  category: {
     type: String,
     enum: ['angular','wordpress','nodejs','frontend','backend']
   }

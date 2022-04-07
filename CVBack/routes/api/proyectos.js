@@ -22,10 +22,10 @@ router.get("/:idProyecto", async (req, res) => {
   }
 });
 
-router.get("/categoria/:categoria", async (req, res) => {
+router.get("/category/:category", async (req, res) => {
   console.log(req.payload);
   try {
-    const proyectos = await Proyecto.find({ categoria: req.params.categoria });
+    const proyectos = await Proyecto.find({ category: req.params.category });
     res.json(proyectos);
   } catch (err) {
     res.status(503).json({ error: err });
@@ -43,7 +43,7 @@ router.post(
       .notEmpty()
       .isLength({ max: 40 }),
     check(
-      "descripcion",
+      "description",
       "La descripcion debe incluirse en la peticion y tiene un maximo de 300 caracteres"
     )
       .notEmpty()

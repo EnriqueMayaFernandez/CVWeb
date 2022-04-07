@@ -21,7 +21,7 @@ export class ListProyectsComponent implements OnInit {
     this.projectServices.getAllProjects().subscribe((value) => {
       this.arrProjects = value;
       const arrStrings = this.arrProjects.map((project) => {
-        return project.categoria;
+        return project.category;
       });
       this.arrCategories = Array.from(new Set(arrStrings));
     });

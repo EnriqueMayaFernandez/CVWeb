@@ -10,8 +10,17 @@ export class ProjectsService {
   arrProyectos: Project[]=[];
   baseUrl: string;
   constructor(private httpClient: HttpClient) {
-    this.baseUrl = 'http://localhost:3000/api/proyectos';
+    this.baseUrl = 'http://localhost:3000/api/proyectos/';
     this.getToken();
+  }
+
+  getOptions(){
+    const valores = {
+      headers: new HttpHeaders({
+        'access-token' : localStorage.getItem('token') || '{}',
+      })
+    };
+    return valores;
   }
 
   getToken(): void {
@@ -23,20 +32,17 @@ export class ProjectsService {
   }
 
   getAllProjects(): Observable<Project[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'access-token' : localStorage.getItem('token') || '{}',
-      })
-    };
+    const httpOptions = this.getOptions();
     return this.httpClient.get<Project[]>(this.baseUrl,httpOptions);
   }
 
   getProjectsByCategory(category:string) : Observable<Project[]>{
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'access-token' : localStorage.getItem('token') || '{}',
-      })
-    };
-    return this.httpClient.get<Project[]>(this.baseUrl+'/'+category,httpOptions);
+    const httpOptions = this.getOptions();
+    return this.httpClient.get<Project[]>(this.baseUrl+'category/'+category,httpOptions);
+  }
+
+  getProjectById(pId:string) : Observable<Project>{
+    const httpOptions = this.getOptions();
+    return this.httpClient.get<Project>(this.baseUrl + pId,httpOptions);
   }
 }

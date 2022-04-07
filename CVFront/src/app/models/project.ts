@@ -1,35 +1,27 @@
 export class Project {
   public _id: string;
   public titulo: string;
-  public descripcion: string;
+  public description: string;
   public url: string;
-  public cliente: string;
+  public client: string;
   public urlClient: string;
-  public categoria: string;
+  public category: string;
 
   constructor(
     _id: string,
     titulo: string,
-    descripcion: string,
+    description: string,
     url: string,
-    cliente: string,
-    urlCliente: string,
-    categoria: string
+    client: string,
+    urlClient: string,
+    category: string
   ) {
     this._id = _id;
     this.titulo = titulo;
-    this.descripcion = descripcion;
+    this.description = description;
     this.url = url;
-    this.cliente = cliente;
-    this.urlClient = urlCliente;
-    this.categoria = categoria;
-  }
-
-  getTitulo(): string {
-    return this.titulo;
-  }
-
-  getId(): string {
-    return this._id;
+    this.client = client;
+    this.urlClient = urlClient;
+    this.category = category;
   }
 }

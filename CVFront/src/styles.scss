@@ -1,10 +1,8 @@
-
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -21,13 +19,15 @@ $CVFront-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$CVFront-theme: mat.define-light-theme((
-  color: (
-    primary: $CVFront-primary,
-    accent: $CVFront-accent,
-    warn: $CVFront-warn,
+$CVFront-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $CVFront-primary,
+      accent: $CVFront-accent,
+      warn: $CVFront-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -36,6 +36,19 @@ $CVFront-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-*{box-sizing: border-box;}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+ img{
+   width: 100%;
+   height: auto;
+   display: block;
+ }
