@@ -2,15 +2,31 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1%;
+  .project {
+    flex-basis: 98%;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 100px;
+    background-color: tomato;
+    margin: 1%;
+  }
 }
-
-.project {
-  flex-basis: 98%;
-  padding-left: 8px;
-  padding-right: 8px;
-  height: 100px;
-  background-color: tomato;
-  margin: 1%;
+.filters {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 10px;
+      background: black;
+      color: white;
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 120%;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -22,9 +38,9 @@
 }
 
 @media (min-width: 1120px) {
-    .list-project {
-      .project {
-        flex-basis: 31%;
-      }
+  .list-project {
+    .project {
+      flex-basis: 31%;
     }
   }
+}

@@ -1,4 +1,5 @@
 const express = require("express");
+const exphbs = require("express-handlebars");
 const cors = require('cors');
 const app = express();
 
@@ -7,6 +8,10 @@ require("./db");
 
 const apiRouter = require("./routes/api");
 
+//Template Engine Setup
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+
 app.use(cors());
 app.use(express.json());
 app.use(
@@ -14,6 +19,10 @@ app.use(
     extended: true
   })
 );
+
+app.get('/test',(req,res) => {
+  res.render('prueba')
+});
 
 app.use("/api", apiRouter);
 

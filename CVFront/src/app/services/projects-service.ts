@@ -30,4 +30,13 @@ export class ProjectsService {
     };
     return this.httpClient.get<Project[]>(this.baseUrl,httpOptions);
   }
+
+  getProjectsByCategory(category:string) : Observable<Project[]>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'access-token' : localStorage.getItem('token') || '{}',
+      })
+    };
+    return this.httpClient.get<Project[]>(this.baseUrl+'/'+category,httpOptions);
+  }
 }

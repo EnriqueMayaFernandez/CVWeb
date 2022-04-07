@@ -9,6 +9,7 @@ import { ProjectsService } from 'src/app/services/projects-service';
 })
 export class ListProyectsComponent implements OnInit {
   arrProjects: Project[] = [];
+  arrCategories: string[] = [];
 
   constructor(private projectServices: ProjectsService) {}
 
@@ -19,7 +20,22 @@ export class ListProyectsComponent implements OnInit {
   getProjets() {
     this.projectServices.getAllProjects().subscribe((value) => {
       this.arrProjects = value;
-      console.log(this.arrProjects);
+      const arrStrings = this.arrProjects.map((project) => {
+        return project.categoria;
+      });
+      this.arrCategories = Array.from(new Set(arrStrings));
     });
+  }
+
+  loadCategories(category = '') {
+    if (category !== '') {
+      this.projectServices.getProjectsByCategory(category).subscribe((value) => {
+        this.arrProjects = value;
+        });
+    } else {
+      this.projectServices.getAllProjects().subscribe((value) => {
+        this.arrProjects = value;
+        });
+    }
   }
 }

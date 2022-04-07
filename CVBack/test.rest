@@ -1,9 +1,13 @@
 GET http://localhost:3000/api/proyectos
 access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
 
+
+###
+GET http://localhost:3000/api/proyectos/624c01a8cc9b3f351c7a565d
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
 ###
 
-GET http://localhost:3000/api/proyectos/nodejs
+GET http://localhost:3000/api/proyectos/categoria/nodejs
 access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSnVhbmFuIiwiY3JlYXRlZEF0IjoxNjQ5MjMzOTM4LCJleHBpcmVkQXQiOjE2NDk2NjU5Mzh9.kslv_6YDnfy7KUXN8AxmvUvsvCR3rv3IlwpmdwOt9J0
 
 ###

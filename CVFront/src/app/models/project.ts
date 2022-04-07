@@ -1,33 +1,35 @@
 export class Project {
-  private nombre: string;
-  private descripcion: string;
-  private imagenes: [];
-  private url: string;
-  private ano: number;
-  private cliente: string;
-  private urlClient: string;
-  private categoria: string;
-  private tecnologias: string;
+  public _id: string;
+  public titulo: string;
+  public descripcion: string;
+  public url: string;
+  public cliente: string;
+  public urlClient: string;
+  public categoria: string;
 
   constructor(
-    nombre: string,
+    _id: string,
+    titulo: string,
     descripcion: string,
-    imagenes: [],
     url: string,
-    ano: number,
     cliente: string,
     urlCliente: string,
-    categoria: string,
-    tecnologias: string
+    categoria: string
   ) {
-    this.nombre = nombre;
+    this._id = _id;
+    this.titulo = titulo;
     this.descripcion = descripcion;
-    this.imagenes = imagenes;
     this.url = url;
-    this.ano = ano;
     this.cliente = cliente;
     this.urlClient = urlCliente;
     this.categoria = categoria;
-    this.tecnologias = tecnologias;
+  }
+
+  getTitulo(): string {
+    return this.titulo;
+  }
+
+  getId(): string {
+    return this._id;
   }
 }
