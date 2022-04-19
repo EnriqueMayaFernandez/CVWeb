@@ -1,21 +1,41 @@
+@import '../../../assets/partials/variables';
+
 .sidenav-container {
   height: 100%;
+  .sidenav {
+    width: 200px;
+    .mat-toolbar {
+      background: inherit;
+    }
+    .menu{
+      list-style: none;
+      width: 100%;
+      padding: {
+        top:60%;
+        left:0%;
+      }
+      li{
+        text-align: center;
+        a{
+          display: block;
+          padding: 20px 0px;
+          text-decoration: none;
+          font: {
+            size:120%;
+            family: $font_primary;
+          }
+
+        }
+      }
+
+    }
+  }
 }
 
-.sidenav {
-  width: 200px;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.mat-list-item{
-  font-family: 'Open Sans', sans-serif;
+@media(min-width:500px){
+  .sidenav-container{
+    .mat-toolbar-row, .mat-toolbar-single-row {
+      height: 0px;
+    }
+  }
 }

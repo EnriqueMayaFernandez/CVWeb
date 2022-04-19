@@ -3,16 +3,18 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#" routerLink="/home">HOME</a>
-      <a mat-list-item href="#">SOBRE MI</a>
-      <a mat-list-item href="#">PROYECTOS</a>
-      <a mat-list-item routerLink="/contact" >CONTACTO</a>
-    </mat-nav-list>
+    <div class="logo">
+      <img src="">
+    </div>   
+    <ul class="menu">
+      <li><a (click)="navigateTo($event)" [routerLink]="'home'" fragment="hero">HOME</a></li>
+      <li><a (click)="navigateTo($event)" [routerLink]="'about'" fragment="about">SOBRE MI</a></li>
+      <li><a (click)="navigateTo($event)" [routerLink]="'proyectos'" fragment="proyectos">PROYECTOS</a></li>
+      <li><a [routerLink]="'contact'">CONTACTO</a></li>
+    </ul>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -21,7 +23,6 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>CVFront</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>

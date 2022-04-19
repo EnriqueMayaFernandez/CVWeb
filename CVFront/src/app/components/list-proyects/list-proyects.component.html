@@ -6,6 +6,9 @@
 </div>
 <div class="list-project">
     <div class="project" *ngFor="let project of arrProjects">
+        <div class="imagen">
+            <img src="/assets/images/superman.png">
+        </div>
         <h2>{{project.titulo}}</h2>
         <a [routerLink]="['/projects/',project._id]">Ver detalle</a>
     </div>
