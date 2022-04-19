@@ -1,28 +1,28 @@
 <h4>Crea nuevo proyecto</h4>
-<form action="/proyectos/create" method="POST">
+<form action="/proyectos/update" method="POST">
   <div class="form-group">
     <label>Titulo</label>
-    <input type="text" name="titulo" class="form-control" />
+    <input type="text" name="titulo" class="form-control" value="{{proyecto.titulo}}"/>
   </div>
   <div class="form-group">
     <label>Descripcion</label>
-    <input type="text" name="description" class="form-control" />
+    <input type="text" name="description" class="form-control" value="{{proyecto.description}}"/>
   </div>
   <div class="form-group">
     <label>Url</label>
-    <input type="text" name="url" class="form-control" />
+    <input type="text" name="url" class="form-control" value="{{proyecto.url}}"/>
   </div>
   <div class="form-group">
     <label>Cliente</label>
-    <input type="text" name="client" class="form-control" />
+    <input type="text" name="client" class="form-control" value="{{proyecto.client}}"/>
   </div>
   <div class="form-group">
     <label>Url Cliente</label>
-    <input type="text" name="urlClient" class="form-control" />
+    <input type="text" name="urlClient" class="form-control" value="{{proyecto.urlClient}}"/>
   </div>
   <div class="form-group">
     <label>Categoria</label>
-    <select type="text" name="category" class="form-control">
+    <select type="text" name="category" class="form-control" value="{{proyecto.categoria}}">
         <option value="angular">Angular</option>
         <option value="wordpress">Wordpress</option>
         <option value="nodejs">NodeJS</option>
@@ -34,5 +34,6 @@
     <label>Imagen</label>
     <input type="file" name="image">
   </div>
+  <input type="hidden" name="proyectoId" value="{{proyecto._id}}">
   <input type="submit" value="Enviar" class="btn btn-block btn-primary">
 </form>

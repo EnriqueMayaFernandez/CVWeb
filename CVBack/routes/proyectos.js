@@ -14,6 +14,12 @@ router.get("/new", async (req, res) => {
   res.render("proyectos/formulario");
 });
 
+router.get('/edit/:proyectoId', async (req, res) => {
+  const proyecto = await Proyecto.findById(req.params.proyectoId).lean();
+  res.render('proyectos/formEdit', { proyecto }); 
+});
+
+
 router.post("/create", upload.single('image'), async (req, res) => {
   console.log(req.file);
   // const finalPath =
@@ -27,6 +33,15 @@ router.post("/create", upload.single('image'), async (req, res) => {
 
   try {
     const proyecto = await Proyecto.create(req.body);
+    res.redirect("/proyectos");
+  } catch (err) {
+    res.json({ error: err });
+  }
+});
+
+router.post('/update',async (req, res) => {
+  try {
+    await Proyecto.findByIdAndUpdate(req.body.proyectoId, req.body);
     res.redirect("/proyectos");
   } catch (err) {
     res.json({ error: err });
